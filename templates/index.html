@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <center>
+<form action="caesar" method="post" id="form1">
+    {% csrf_token %}
+    <div id="overlay">
+        <div id="particles-js">
+            <h1 id="head" class="glow"> Caesar Cipher</h1>
+    <textarea rows="10" cols="50" id="area1" name="plain" placeholder=" Plain Text">{{ result }}</textarea> &nbsp; &nbsp;
+            <textarea rows="1" cols="25" name="key" id="shift" placeholder="  Number of Shifts"></textarea>&nbsp; &nbsp;
+            <textarea rows="10" cols="50" id="area2" name="decrypt" placeholder=" Cipher Text">{{ result1 }}</textarea>
+            <br><br>
+            <button value='Encrpyt' id='en' name="ebutton" class="btn en">Encrpyt</button> &nbsp; &nbsp; &nbsp;
+            <button value='Decrpyt' id='de' name="dbutton" class="btn de">Decrpyt</button>
+            </div>
+            </div>
+</form>
+    </center>
+{% endblock %}
+
